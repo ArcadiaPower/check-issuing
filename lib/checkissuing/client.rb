@@ -8,8 +8,8 @@ module Checkissuing
       ''
     end
 
-    def call(relative_path, data = nil)
-      self.post(base_path+relative_path, body: data)
+    def call(relative_path, data = nil, options = {})
+      self.post(base_path+relative_path, options.reverse_merge(body: data))
     end
 
   end
