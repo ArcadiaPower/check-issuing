@@ -40,8 +40,12 @@ module Checkissuing
       options[:body] ||= {}
       options[:body][:akey] ||= Checkissuing.api_key
       options[:body][:client_id] ||= Checkissuing.client_id
+
+
+      options[:http_proxyaddr] = Checkissuing.proxy_host if Checkissuing.proxy_host.present?
+      options[:http_proxyport] = Checkissuing.proxy_port if Checkissuing.proxy_port.present?
+      options[:http_proxyuser] = Checkissuing.proxy_user if Checkissuing.proxy_user.present?
+      options[:http_proxypass] = Checkissuing.proxy_password if Checkissuing.proxy_user.present?
     end
-
   end
-
 end
