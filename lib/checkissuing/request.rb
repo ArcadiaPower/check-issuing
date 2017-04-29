@@ -4,7 +4,6 @@ require 'json'
 module Checkissuing
   class Request
     include HTTParty
-    debug_output Checkissuing.debug_output if Checkissuing.debug
 
     def get(path, options={})
       set_auth(options)

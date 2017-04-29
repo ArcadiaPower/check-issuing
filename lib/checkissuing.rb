@@ -10,8 +10,15 @@ module Checkissuing
   mattr_accessor :debug
   @@debug = true
 
-  mattr_accessor :debug_output
-  @@debug_output = $stdout
+  def self.debug=(flag)
+    @@debug = flag
+    Checkissuing::Request.default_options.delete(:debug_output) unless flag
+  end
+
+  def self.debug_output=(output)
+    return unless debug
+    Checkissuing::Request.debug_output(output)
+  end
 
   mattr_accessor :proxy_port
   @@proxy_port = 80
@@ -23,3 +30,6 @@ end
 
 require 'checkissuing/request'
 require 'checkissuing/client'
+
+# default starting point
+Checkissuing.debug_output = $stdout
