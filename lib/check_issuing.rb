@@ -12,12 +12,12 @@ module CheckIssuing
 
   def self.debug=(flag)
     @@debug = flag
-    Checkissuing::Request.default_options.delete(:debug_output) unless flag
+    CheckIssuing::Request.default_options.delete(:debug_output) unless flag
   end
 
   def self.debug_output=(output)
     return unless debug
-    Checkissuing::Request.debug_output(output)
+    CheckIssuing::Request.debug_output(output)
   end
 
   mattr_accessor :proxy_port
@@ -32,4 +32,4 @@ require 'check_issuing/request'
 require 'check_issuing/client'
 
 # default starting point
-Checkissuing.debug_output = $stdout
+CheckIssuing.debug_output = $stdout
