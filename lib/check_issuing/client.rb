@@ -1,4 +1,4 @@
-module Checkissuing
+module CheckIssuing
   class Client < Request
 
     def initialize
