@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'checkissuing/version'
+require 'check_issuing/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "checkissuing"
-  spec.version       = Checkissuing::VERSION
+  spec.name          = 'check_issuing'
+  spec.version       = CheckIssuing::VERSION
   spec.authors       = ["Iwo Dziechciarow"]
   spec.email         = ["iiwo@o2.pl"]
-  spec.summary       = %q{Simple wrapper for Checkissuing.com }
-  spec.description   = %q{Simple wrapper for Checkissuing.com (work in progress) }
-  spec.homepage      = "https://github.com/ArcadiaPower/checkissuing"
+  spec.summary       = %q{Simple wrapper for checkissuing.com }
+  spec.description   = %q{Simple wrapper for checkissuing.com (work in progress) }
+  spec.homepage      = "https://github.com/ArcadiaPower/check-issuing"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

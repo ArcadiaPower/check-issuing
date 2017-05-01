@@ -1,3 +1,3 @@
-# Checkissuing
+# CheckIssuing
 
-Simple Ruby wrapper for Checkissuing.com
+Simple Ruby wrapper for checkissuing.com

@@ -1,7 +1,7 @@
 require 'httparty'
-require 'checkissuing/version'
+require 'check_issuing/version'
 
-module Checkissuing
+module CheckIssuing
   mattr_accessor :api_key, :client_id, :proxy_host, :proxy_user, :proxy_password
 
   mattr_accessor :endpoint
@@ -28,8 +28,8 @@ module Checkissuing
   end
 end
 
-require 'checkissuing/request'
-require 'checkissuing/client'
+require 'check_issuing/request'
+require 'check_issuing/client'
 
 # default starting point
 Checkissuing.debug_output = $stdout
